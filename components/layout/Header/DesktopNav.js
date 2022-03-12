@@ -1,0 +1,26 @@
+import Link from "next/link";
+import styles from "./Header.module.css";
+
+const DesktopNav = ({ navLinks }) => {
+  return (
+    <nav
+      className={`${styles.nav} bg-light/5  backdrop-blur-2xl h-full flex items-center px-12 gap-x-[37px] lg:gap-x-[50px] lg:pr-[165px] lg:pl-[125px]`}
+    >
+      {navLinks.map((navLink, index) => (
+        <Link key={index} href={navLink.link}>
+          <a
+            href=""
+            className={`${styles.navlink} text-light text-sb-2 lg:text-[16px]`}
+          >
+            <span className="hidden font-bold lg:inline mr-[10px]">
+              {navLink.code}
+            </span>
+            {navLink.name}
+          </a>
+        </Link>
+      ))}
+    </nav>
+  );
+};
+
+export default DesktopNav;

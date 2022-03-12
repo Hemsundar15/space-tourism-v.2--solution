@@ -1,0 +1,36 @@
+.header::before {
+  display: none;
+  position: absolute;
+  content: "";
+  left: 165px;
+  top: 48px;
+  width: calc(100% - 965px);
+  height: 1px;
+  background-color: white;
+  opacity: 0.25;
+}
+
+@media (min-width: 1440px) {
+  .header::before {
+    display: block;
+  }
+}
+
+.navlink {
+  position: relative;
+}
+
+.navlink::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  background: white;
+  bottom: -36px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navlink:hover::after {
+  width: 100%;
+}
