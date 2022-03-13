@@ -10,9 +10,9 @@ const DesktopNav = ({ navLinks }) => {
         <Link key={index} href={navLink.link}>
           <a
             href=""
-            className={`${styles.navlink} text-light text-sb-2 lg:text-[16px]`}
+            className={`${styles.navlink} font-sans tracking-[2.36px] text-light text-sb-2 lg:text-[16px]`}
           >
-            <span className="hidden font-bold lg:inline mr-[10px]">
+            <span className="hidden tracking-0 font-bold lg:inline mr-[10px]">
               {navLink.code}
             </span>
             {navLink.name}

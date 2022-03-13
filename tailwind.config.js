@@ -28,7 +28,7 @@ module.exports = {
       h5: "1.75rem", //28px
     },
     fontFamily: {
-      sans: ["Barlow", "sans-serif"],
+      sans: ["Barlow Condensed", "sans-serif"],
       serif: ["Bellefair", "serif"],
     },
     extend: {},
