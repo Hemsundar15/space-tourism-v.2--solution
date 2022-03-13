@@ -21,7 +21,7 @@ const Header = () => {
     {
       code: "01",
       name: "DESTINATION",
-      link: "/destination",
+      link: "/destinations",
     },
     {
       code: "02",
