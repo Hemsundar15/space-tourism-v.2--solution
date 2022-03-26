@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./Header.module.css";
 
 import Logo from "../../../assets/shared/logo.svg";
 import close from "../../../assets/shared/icon-close.svg";
@@ -10,62 +9,71 @@ import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    console.log(isMenuOpen);
 
-  const navLinks = [
-    {
-      code: "00",
-      name: "HOME",
-      link: "/",
-    },
-    {
-      code: "01",
-      name: "DESTINATION",
-      link: "/destinations",
-    },
-    {
-      code: "02",
-      name: "CREW",
-      link: "/crew",
-    },
-    {
-      code: "03",
-      name: "TECHNOLOGY",
-      link: "/technology",
-    },
-  ];
+    const handleHamburgerClick = () => {
+        setIsMenuOpen(isMenuOpen ? false : true);
+        console.log("heay");
+    };
 
-  return (
-    <header
-      className={`${styles.header} fixed h-[88px] w-full px-6 flex items-center justify-between z-40 md:h-24 md:px-0 lg:mt-10`}
-    >
-      {/* Logo */}
-      <Link href="/" passHref>
-        <div className="w-10 aspect-square relative z-50 md:ml-[39px] md:w-12 lg:ml-[55px]">
-          <Image src={Logo} alt="Logo" layout="fill"></Image>
-        </div>
-      </Link>
+    const navLinks = [
+        {
+            code: "00",
+            name: "HOME",
+            link: "/",
+        },
+        {
+            code: "01",
+            name: "DESTINATION",
+            link: "/destinations",
+        },
+        {
+            code: "02",
+            name: "CREW",
+            link: "/crew",
+        },
+        {
+            code: "03",
+            name: "TECHNOLOGY",
+            link: "/technology",
+        },
+    ];
 
-      {/* Mobile Nav */}
-      <MobileNav navLinks={navLinks} isMenuOpen={isMenuOpen}></MobileNav>
+    return (
+        <header className="header">
+            {/* Logo */}
+            <Link href="/" passHref>
+                <div className="header__logo">
+                    <Image src={Logo} alt="Logo" layout="fill"></Image>
+                </div>
+            </Link>
 
-      <DesktopNav navLinks={navLinks}></DesktopNav>
+            {/* Mobile Nav */}
+            <MobileNav navLinks={navLinks} isMenuOpen={isMenuOpen}></MobileNav>
 
-      {/* Hamburger */}
-      <button
-        onClick={() => setIsMenuOpen(isMenuOpen ? false : true)}
-        className="z-50 md:hidden"
-      >
-        <div>
-          {isMenuOpen ? (
-            <Image src={close} alt="Close Hamburger"></Image>
-          ) : (
-            <Image src={open} alt="Open Hamburger"></Image>
-          )}
-        </div>
-      </button>
-    </header>
-  );
+            <DesktopNav navLinks={navLinks}></DesktopNav>
+
+            {/* Hamburger */}
+            <div
+                className={`hamburger ${isMenuOpen ? "active" : ""}`}
+                onClick={handleHamburgerClick}
+            >
+                <div className="line line--1"></div>
+                <div className="line line--2"></div>
+                <div className="line line--3"></div>
+            </div>
+            {/* <button onClick={() => setIsMenuOpen(isMenuOpen ? false : true)}>
+                <div>
+                    {isMenuOpen ? (
+                        <Image src={close} alt="Close Hamburger"></Image>
+                    ) : (
+                        <Image src={open} alt="Open Hamburger"></Image>
+                    )}
+                </div>
+            </button> */}
+        </header>
+    );
 };
 
 export default Header;

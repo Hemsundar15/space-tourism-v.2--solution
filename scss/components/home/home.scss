@@ -1,0 +1,41 @@
+.home {
+    @include paddingTop;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    &__textbox {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px 0;
+    }
+}
+
+.cta__holder {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .cta--1 {
+        width: 150px;
+        aspect-ratio: 1/1;
+        background: $light--clr;
+        color: $dark--clr;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .heading--4 {
+            color: $dark--clr;
+        }
+    }
+}

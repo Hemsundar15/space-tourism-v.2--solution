@@ -1,4 +1,4 @@
-.header::before {
+/* .header::before {
   display: none;
   position: absolute;
   content: "";
@@ -33,4 +33,4 @@
 
 .navlink:hover::after {
   width: 100%;
-}
+} */

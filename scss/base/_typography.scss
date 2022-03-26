@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.navlink--mobile {
+    color: white;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.heading--1 {
+    font-family: "Bellefair", serif;
+    font-size: 80px;
+    color: white;
+    line-height: 100px;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        font-size: 100px;
+    }
+}
+
+.heading--2 {
+    font-family: "Bellefair", serif;
+    font-size: 100px;
+    color: white;
+}
+
+.heading--3 {
+    font-family: "Bellefair", serif;
+    font-size: 56px;
+    color: white;
+}
+
+.heading--4 {
+    font-family: "Bellefair", serif;
+    color: white;
+    letter-spacing: 1.25px;
+    font-size: 20px;
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        font-size: 32px;
+    }
+}
+
+.heading--5 {
+    font-family: "Bellefair", serif;
+    color: $fog--clr;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        font-size: 20px;
+        letter-spacing: 3.4px;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        font-size: 28px;
+        letter-spacing: 4.75px;
+    }
+}
+
+.description {
+    font-family: "Barlow Condensed";
+    font-size: 15px;
+    line-height: 25px;
+    color: $fog--clr;
+    max-width: 325px;
+}
