@@ -12,6 +12,21 @@
         flex-direction: column;
         align-items: center;
         gap: 16px 0;
+
+        @media (min-height: $layout-breakpoint-medium) {
+            gap: 24px 0;
+        }
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            text-align: left;
+            align-items: flex-start;
+            padding: 0 0 0 165px;
+            width: 50%;
+        }
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        flex-direction: row;
     }
 }
 
@@ -23,19 +38,89 @@
     align-items: center;
     justify-content: center;
 
+    @media (min-width: $layout-breakpoint-xlarge) {
+        width: 50%;
+        justify-content: right;
+        padding: 0 165px 0 0;
+    }
+
     .cta--1 {
+        position: relative;
         width: 150px;
         aspect-ratio: 1/1;
-        background: $light--clr;
-        color: $dark--clr;
-        border-radius: 50%;
 
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 10;
+
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 10;
+            content: "";
+            border-radius: 50%;
+        }
+
+        @media (min-width: $layout-breakpoint-medium) {
+            width: 250px;
+        }
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            width: 275px;
+        }
 
         .heading--4 {
             color: $dark--clr;
+            z-index: 100;
         }
+    }
+
+    .cta--hover {
+        position: absolute;
+        width: 0;
+        aspect-ratio: 1/1;
+        background: rgba(255, 255, 255, 5%);
+        border-radius: 50%;
+        z-index: -100;
+        transition: 0.4s;
+    }
+
+    .cta--1:hover .cta--hover {
+        width: 450px;
+    }
+}
+
+.bg--mobile {
+    display: flex;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        display: none;
+    }
+}
+
+.bg--tablet {
+    display: none;
+    @media (min-width: $layout-breakpoint-medium) {
+        display: flex;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        display: none;
+    }
+}
+
+.bg--desktop {
+    display: none;
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        display: flex;
     }
 }

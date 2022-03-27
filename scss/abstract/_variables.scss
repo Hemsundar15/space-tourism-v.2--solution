@@ -16,4 +16,8 @@ $bellefair--fnt: "Bellefair", serif;
 //padding
 @mixin paddingTop {
     padding-top: 112px;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        padding-top: 200px;
+    }
 }

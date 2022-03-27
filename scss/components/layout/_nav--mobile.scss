@@ -1,0 +1,31 @@
+.nav--mobile {
+    min-width: 80vw;
+    min-height: 100vh;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    padding: 120px 32px;
+    transition: 0.4s;
+    background: rgba(255, 255, 255, 5%);
+    backdrop-filter: blur(80px);
+
+    a {
+        display: flex;
+        gap: 10px;
+    }
+
+    @media (min-width: $layout-breakpoint-medium) {
+        display: none;
+    }
+}
+
+.nav--mobile.active {
+    transform: translate(0);
+}

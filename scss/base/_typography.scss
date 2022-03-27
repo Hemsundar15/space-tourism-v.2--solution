@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&display=swap");
 
 body {
     font-family: "Barlow Condensed", sans-serif;
@@ -15,6 +16,55 @@ body {
     }
 }
 
+.navlink--desktop {
+    position: relative;
+    color: $light--clr;
+    letter-spacing: 2.36px;
+    font-size: 14px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 3px;
+        background: white;
+        left: 50%;
+        bottom: -36px;
+        transform: translate(-50%);
+        transition: 0.4s;
+    }
+
+    &:hover::before {
+        width: 100%;
+        opacity: 50%;
+    }
+
+    span {
+        display: none;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        display: flex;
+        align-items: center;
+        gap: 0 12px;
+
+        span {
+            font-weight: 700;
+            display: inline-block;
+        }
+    }
+}
+
+.navlink--desktop.active {
+    &::before {
+        width: 100%;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
 .heading--1 {
     font-family: "Bellefair", serif;
     font-size: 80px;
@@ -22,7 +72,8 @@ body {
     line-height: 100px;
 
     @media (min-width: $layout-breakpoint-medium) {
-        font-size: 100px;
+        font-size: 150px;
+        line-height: 150px;
     }
 }
 
@@ -44,16 +95,17 @@ body {
     letter-spacing: 1.25px;
     font-size: 20px;
 
-    @media (min-width: $layout-breakpoint-xlarge) {
+    @media (min-width: $layout-breakpoint-medium) {
         font-size: 32px;
     }
 }
 
 .heading--5 {
-    font-family: "Bellefair", serif;
+    font-family: "Barlow condensed", sans-serif;
     color: $fog--clr;
     font-size: 16px;
     letter-spacing: 2.7px;
+    font-weight: 400;
 
     @media (min-width: $layout-breakpoint-medium) {
         font-size: 20px;
@@ -67,9 +119,21 @@ body {
 }
 
 .description {
-    font-family: "Barlow Condensed";
+    font-family: "Barlow", sans-serif;
     font-size: 15px;
     line-height: 25px;
     color: $fog--clr;
     max-width: 325px;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 445px;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        font-size: 18px;
+        line-height: 32px;
+        max-width: 470px;
+    }
 }
