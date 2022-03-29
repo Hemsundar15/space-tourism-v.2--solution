@@ -49,7 +49,7 @@ const Home = () => {
                     </div>
                     <div className="bg--desktop">
                         <Image
-                            src="/assets/home/background-home-tablet.jpg"
+                            src="/assets/home/background-home-desktop.jpg"
                             alt="background"
                             layout="fill"
                             objectFit="cover"
