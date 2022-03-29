@@ -21,3 +21,8 @@ $bellefair--fnt: "Bellefair", serif;
         padding-top: 200px;
     }
 }
+
+@mixin paddingY {
+    padding-left: 24px;
+    padding-right: 24px;
+}

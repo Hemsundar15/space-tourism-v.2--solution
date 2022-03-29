@@ -1,13 +1,14 @@
 import "../scss/main.scss";
 
 import Header from "../components/layout/Header/Header";
+import { Fragment } from "react/cjs/react.production.min";
 
 function MyApp({ Component, pageProps }) {
     return (
-        <main>
+        <Fragment>
             <Header></Header>
             <Component {...pageProps} />
-        </main>
+        </Fragment>
     );
 }
 

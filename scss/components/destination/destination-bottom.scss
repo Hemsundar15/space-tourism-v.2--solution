@@ -1,0 +1,109 @@
+.destination__bottom {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .destination__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 26px;
+
+        button {
+            position: relative;
+            background-color: transparent;
+            border: none;
+            color: $fog--clr;
+            padding: 0 0 12px 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%);
+                height: 3px;
+                background: $light--clr;
+                width: 0;
+                transition: 0.3s;
+            }
+
+            &:hover::before {
+                width: 100%;
+                background: rgba(255, 255, 255, 0.25);
+            }
+        }
+
+        button.active {
+            color: $light--clr;
+
+            &::before {
+                background: rgb(255, 255, 255);
+                width: 100%;
+            }
+        }
+    }
+
+    .heading--2 {
+        margin-top: 20px;
+    }
+
+    .description {
+        text-align: center;
+        padding: 1px 24px 32px 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+        @media (min-width: $layout-breakpoint-medium) {
+            padding: 8px 100px 50px 100px;
+        }
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            text-align: left;
+            padding: 14px 166px 54px 0;
+        }
+    }
+
+    .distance__holder {
+        margin: 32px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @media (min-width: $layout-breakpoint-medium) {
+            flex-direction: row;
+            margin: 28px 0;
+        }
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            gap: 80px;
+        }
+
+        .distance {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+
+            @media (min-width: $layout-breakpoint-xlarge) {
+                align-items: flex-start;
+            }
+        }
+
+        .time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+
+            @media (min-width: $layout-breakpoint-xlarge) {
+                align-items: flex-start;
+            }
+        }
+    }
+}

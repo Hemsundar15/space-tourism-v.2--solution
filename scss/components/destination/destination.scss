@@ -1,0 +1,25 @@
+.destination {
+    @include paddingY;
+    padding-top: 88px;
+    position: relative;
+    min-height: 100vh;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        padding: 136px 0 0 0;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        padding: 212px 0 0 0;
+    }
+
+    .destination__inside {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            flex-direction: row;
+        }
+    }
+}

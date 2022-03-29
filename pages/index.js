@@ -3,10 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import mobileBackground from "../assets/home/background-home-mobile.jpg";
-import tabletBackground from "../assets/home/background-home-tablet.jpg";
-import desktopBackground from "../assets/home/background-home-desktop.jpg";
-
 const Home = () => {
     return (
         <Fragment>
@@ -34,10 +30,10 @@ const Home = () => {
                     </Link>
                 </div>
 
-                <div style={{ zIndex: "-1" }}>
+                <div className="bg__holder">
                     <div className="bg--mobile">
                         <Image
-                            src={mobileBackground}
+                            src="/assets/home/background-home-mobile.jpg"
                             alt="background"
                             layout="fill"
                             objectFit="cover"
@@ -45,7 +41,7 @@ const Home = () => {
                     </div>
                     <div className="bg--tablet">
                         <Image
-                            src={tabletBackground}
+                            src="/assets/home/background-home-tablet.jpg"
                             alt="background"
                             layout="fill"
                             objectFit="cover"
@@ -53,7 +49,7 @@ const Home = () => {
                     </div>
                     <div className="bg--desktop">
                         <Image
-                            src={desktopBackground}
+                            src="/assets/home/background-home-tablet.jpg"
                             alt="background"
                             layout="fill"
                             objectFit="cover"

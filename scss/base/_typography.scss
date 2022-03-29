@@ -1,12 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&display=swap");
-
-body {
-    font-family: "Barlow Condensed", sans-serif;
-}
-
 .navlink--mobile {
+    font-family: "Barlow Condensed", sans-serif;
     color: white;
     letter-spacing: 2.7px;
     font-size: 16px;
@@ -17,6 +10,7 @@ body {
 }
 
 .navlink--desktop {
+    font-family: "Barlow Condensed", sans-serif;
     position: relative;
     color: $light--clr;
     letter-spacing: 2.36px;
@@ -79,8 +73,16 @@ body {
 
 .heading--2 {
     font-family: "Bellefair", serif;
-    font-size: 100px;
+    font-size: 56px;
     color: white;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        font-size: 80px;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        font-size: 100px;
+    }
 }
 
 .heading--3 {
@@ -118,22 +120,41 @@ body {
     }
 }
 
+.subheading--1 {
+    font-family: "Bellefair", serif;
+    font-size: 28px;
+    color: $light--clr;
+    font-weight: 400;
+}
+
+.subheading--2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2.36px;
+    font-weight: 400;
+    color: $fog--clr;
+}
+
 .description {
     font-family: "Barlow", sans-serif;
     font-size: 15px;
     line-height: 25px;
     color: $fog--clr;
-    max-width: 325px;
 
     @media (min-width: $layout-breakpoint-medium) {
         font-size: 16px;
         line-height: 28px;
-        max-width: 445px;
     }
 
     @media (min-width: $layout-breakpoint-xlarge) {
         font-size: 18px;
         line-height: 32px;
-        max-width: 470px;
     }
+}
+
+.nav--text {
+    font-family: "Barlow Condensed";
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    color: $light--clr;
 }

@@ -22,12 +22,13 @@
             position: absolute;
             content: "";
             width: calc(100% - 900px);
-            height: 3px;
+            height: 1px;
             background: white;
             opacity: 25%;
             top: 50%;
             left: 165px;
             transform: translate(0, -50%);
+            z-index: 100;
         }
     }
 

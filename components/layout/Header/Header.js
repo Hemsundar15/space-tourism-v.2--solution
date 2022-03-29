@@ -2,9 +2,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import Logo from "../../../assets/shared/logo.svg";
-import close from "../../../assets/shared/icon-close.svg";
-import open from "../../../assets/shared/icon-hamburger.svg";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 
@@ -14,7 +11,6 @@ const Header = () => {
 
     const handleHamburgerClick = () => {
         setIsMenuOpen(isMenuOpen ? false : true);
-        console.log("heay");
     };
 
     const navLinks = [
@@ -26,7 +22,7 @@ const Header = () => {
         {
             code: "01",
             name: "DESTINATION",
-            link: "/destinations",
+            link: "/destination",
         },
         {
             code: "02",
@@ -45,7 +41,11 @@ const Header = () => {
             {/* Logo */}
             <Link href="/" passHref>
                 <div className="header__logo">
-                    <Image src={Logo} alt="Logo" layout="fill"></Image>
+                    <Image
+                        src="/assets/shared/logo.svg"
+                        alt="Logo"
+                        layout="fill"
+                    ></Image>
                 </div>
             </Link>
 
@@ -63,15 +63,6 @@ const Header = () => {
                 <div className="line line--2"></div>
                 <div className="line line--3"></div>
             </div>
-            {/* <button onClick={() => setIsMenuOpen(isMenuOpen ? false : true)}>
-                <div>
-                    {isMenuOpen ? (
-                        <Image src={close} alt="Close Hamburger"></Image>
-                    ) : (
-                        <Image src={open} alt="Open Hamburger"></Image>
-                    )}
-                </div>
-            </button> */}
         </header>
     );
 };

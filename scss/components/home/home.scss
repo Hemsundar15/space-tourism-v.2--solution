@@ -23,6 +23,14 @@
             padding: 0 0 0 165px;
             width: 50%;
         }
+
+        .description {
+            max-width: 335px;
+
+            @media (min-width: $layout-breakpoint-medium) {
+                max-width: 460px;
+            }
+        }
     }
 
     @media (min-width: $layout-breakpoint-xlarge) {
@@ -94,33 +102,8 @@
     }
 
     .cta--1:hover .cta--hover {
-        width: 450px;
-    }
-}
-
-.bg--mobile {
-    display: flex;
-
-    @media (min-width: $layout-breakpoint-medium) {
-        display: none;
-    }
-}
-
-.bg--tablet {
-    display: none;
-    @media (min-width: $layout-breakpoint-medium) {
-        display: flex;
-    }
-
-    @media (min-width: $layout-breakpoint-xlarge) {
-        display: none;
-    }
-}
-
-.bg--desktop {
-    display: none;
-
-    @media (min-width: $layout-breakpoint-xlarge) {
-        display: flex;
+        @media (min-width: $layout-breakpoint-xlarge) {
+            width: 450px;
+        }
     }
 }

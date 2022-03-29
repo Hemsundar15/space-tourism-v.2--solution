@@ -1,0 +1,41 @@
+.destination__top {
+    width: 60%;
+
+    .heading--5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        color: $light--clr;
+
+        @media (min-width: $layout-breakpoint-medium) {
+            justify-content: start;
+            padding-left: 40px;
+        }
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            padding-left: 166px;
+        }
+
+        span {
+            opacity: 0.5;
+            font-weight: 700;
+        }
+    }
+
+    .imageholder {
+        margin: 32px auto 26px auto;
+        position: relative;
+        width: 170px;
+        aspect-ratio: 1/1;
+
+        @media (min-width: $layout-breakpoint-medium) {
+            margin: 60px auto 52px auto;
+            width: 290px;
+        }
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            width: 22vw;
+        }
+    }
+}

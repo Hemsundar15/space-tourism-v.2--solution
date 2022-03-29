@@ -14,3 +14,34 @@ body {
 a {
     text-decoration: none;
 }
+
+.bg--mobile {
+    display: flex;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        display: none;
+    }
+}
+
+.bg--tablet {
+    display: none;
+    @media (min-width: $layout-breakpoint-medium) {
+        display: flex;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        display: none;
+    }
+}
+
+.bg--desktop {
+    display: none;
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        display: flex;
+    }
+}
+
+.bg__holder {
+    z-index: -1;
+}
