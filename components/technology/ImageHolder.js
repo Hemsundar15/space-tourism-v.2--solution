@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const ImageHolder = ({ imageUrl }) => {
+const ImageHolder = ({ imageUrl, name }) => {
     return (
         <div className="technology__imageholder">
             <div className="image image--1">

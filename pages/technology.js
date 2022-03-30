@@ -25,7 +25,7 @@ const Technology = () => {
                         SPACE LAUNCH 101
                     </h1>
 
-                    <ImageHolder imageUrl={images}></ImageHolder>
+                    <ImageHolder imageUrl={images} name={name}></ImageHolder>
 
                     <div className="technology__content">
                         <div className="technology__nav">
