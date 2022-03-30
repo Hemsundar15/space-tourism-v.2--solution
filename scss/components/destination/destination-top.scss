@@ -1,5 +1,12 @@
 .destination__top {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        width: 60%;
+        justify-content: space-around;
+    }
 
     .heading--5 {
         display: flex;

@@ -23,7 +23,7 @@
         height: 3px;
         background: white;
         left: 50%;
-        bottom: -36px;
+        bottom: -39px;
         transform: translate(-50%);
         transition: 0.4s;
     }
@@ -87,8 +87,16 @@
 
 .heading--3 {
     font-family: "Bellefair", serif;
-    font-size: 56px;
+    font-size: 24px;
     color: white;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        font-size: 40px;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        font-size: 56px;
+    }
 }
 
 .heading--4 {
@@ -157,4 +165,5 @@
     font-size: 16px;
     letter-spacing: 2.7px;
     color: $light--clr;
+    font-weight: 400;
 }

@@ -2,14 +2,10 @@
     @include paddingY;
     padding-top: 88px;
     position: relative;
-    min-height: 100vh;
+    display: flex;
 
     @media (min-width: $layout-breakpoint-medium) {
         padding: 136px 0 0 0;
-    }
-
-    @media (min-width: $layout-breakpoint-xlarge) {
-        padding: 212px 0 0 0;
     }
 
     .destination__inside {
@@ -19,6 +15,7 @@
         flex-direction: column;
 
         @media (min-width: $layout-breakpoint-xlarge) {
+            height: calc(100vh - 136px);
             flex-direction: row;
         }
     }

@@ -1,0 +1,190 @@
+.technology {
+    padding-top: 88px;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        padding-top: 136px;
+    }
+
+    &__inside {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            grid-template-columns: auto auto;
+            grid-template-rows: 40px calc(100vh - 176px);
+        }
+    }
+    .heading--5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        color: $light--clr;
+
+        @media (min-width: $layout-breakpoint-medium) {
+            justify-content: start;
+            padding-left: 40px;
+        }
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            padding-left: 166px;
+        }
+
+        span {
+            opacity: 0.5;
+            font-weight: 700;
+        }
+    }
+
+    &__imageholder {
+        margin-top: 32px;
+
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            grid-column: 2/3;
+            grid-row: 1/3;
+        }
+
+        .image {
+            position: relative;
+            width: 100%;
+            height: 310px;
+
+            @media (min-width: $layout-breakpoint-xlarge) {
+                width: 515px;
+                height: 60vh;
+            }
+        }
+
+        .image--2 {
+            display: inline;
+
+            @media (min-width: $layout-breakpoint-xlarge) {
+                display: none;
+            }
+        }
+
+        .image--1 {
+            display: none;
+
+            @media (min-width: $layout-breakpoint-xlarge) {
+                display: inline;
+            }
+        }
+
+        @media (min-width: $layout-breakpoint-medium) {
+            margin-top: 60px;
+        }
+    }
+}
+
+.technology__content {
+    padding: 34px 0 80px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        padding: 56px 0 100px 0;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+        flex-direction: row;
+        padding: 0;
+        margin: 0 0 0 165px;
+        gap: 115px;
+    }
+
+    .technology__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        button {
+            font-family: "Bellefair", serif;
+            height: 40px;
+            aspect-ratio: 1/1;
+            background-color: transparent;
+            border-radius: 50%;
+            border: none;
+            color: $light--clr;
+            font-size: 16px;
+            transition: 0.3s;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        button.active {
+            background-color: $light--clr;
+            color: $dark--clr;
+        }
+
+        @media (min-width: $layout-breakpoint-medium) {
+            button {
+                height: 60px;
+                font-size: 24px;
+            }
+        }
+
+        @media (min-width: $layout-breakpoint-medium) {
+            flex-direction: column;
+            gap: 50px;
+            button {
+                height: 80px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    .textbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .nav--text {
+            margin-top: 26px;
+            color: $fog--clr;
+
+            @media (min-width: $layout-breakpoint-medium) {
+                margin-top: 44px;
+            }
+
+            @media (min-width: $layout-breakpoint-medium) {
+                margin-top: 0;
+            }
+        }
+
+        .heading--3 {
+            margin-top: 9px;
+
+            @media (min-width: $layout-breakpoint-medium) {
+                margin-top: 16px;
+            }
+        }
+
+        .description {
+            text-align: center;
+            margin-top: 16px;
+            padding: 0 24px;
+            max-width: 450px;
+
+            @media (min-width: $layout-breakpoint-xlarge) {
+                text-align: left;
+                padding: 0;
+            }
+        }
+    }
+}
