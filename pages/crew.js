@@ -3,7 +3,6 @@ import Head from "next/head";
 import { Fragment, useState } from "react";
 
 import data from "../data/data.json";
-import { set } from "mongoose";
 
 const Crew = () => {
     const [crewData] = useState(data.crew);
