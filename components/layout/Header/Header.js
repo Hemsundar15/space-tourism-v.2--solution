@@ -7,7 +7,6 @@ import DesktopNav from "./DesktopNav";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    console.log(isMenuOpen);
 
     const handleHamburgerClick = () => {
         setIsMenuOpen(isMenuOpen ? false : true);

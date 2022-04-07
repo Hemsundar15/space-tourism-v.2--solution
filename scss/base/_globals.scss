@@ -16,6 +16,7 @@ a {
 }
 
 .bg--mobile {
+    z-index: -1;
     display: flex;
 
     @media (min-width: $layout-breakpoint-medium) {
@@ -24,6 +25,8 @@ a {
 }
 
 .bg--tablet {
+    z-index: -1;
+
     display: none;
     @media (min-width: $layout-breakpoint-medium) {
         display: flex;
